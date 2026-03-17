@@ -1,0 +1,20 @@
+/Users/matcha/Library/CloudStorage/GoogleDrive-pockynekokun@googlemail.com/My Drive/Code/Git/Selftape/app node_modules (262)
+[2m├──[0m @eslint/js[0m[2m@9.39.4[0m
+[2m├──[0m @tailwindcss/vite[0m[2m@4.2.1[0m
+[2m├──[0m @types/node[0m[2m@24.12.0[0m
+[2m├──[0m @types/pdfjs-dist[0m[2m@2.10.378[0m
+[2m├──[0m @types/react[0m[2m@19.2.14[0m
+[2m├──[0m @types/react-dom[0m[2m@19.2.3[0m
+[2m├──[0m @vitejs/plugin-react[0m[2m@6.0.1[0m
+[2m├──[0m eslint[0m[2m@9.39.4[0m
+[2m├──[0m eslint-plugin-react-hooks[0m[2m@7.0.1[0m
+[2m├──[0m eslint-plugin-react-refresh[0m[2m@0.5.2[0m
+[2m├──[0m globals[0m[2m@17.4.0[0m
+[2m├──[0m pdfjs-dist[0m[2m@5.5.207[0m
+[2m├──[0m react[0m[2m@19.2.4[0m
+[2m├──[0m react-dom[0m[2m@19.2.4[0m
+[2m├──[0m react-router-dom[0m[2m@7.13.1[0m
+[2m├──[0m tailwindcss[0m[2m@4.2.1[0m
+[2m├──[0m typescript[0m[2m@5.9.3[0m
+[2m├──[0m typescript-eslint[0m[2m@8.57.0[0m
+[2m└──[0m vite[0m[2m@8.0.0[0m
