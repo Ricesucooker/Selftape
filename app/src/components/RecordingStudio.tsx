@@ -153,7 +153,7 @@ export default function Studio() {
               onClick={() => {
                 window.speechSynthesis.cancel();
                 setScriptText("");
-                navigate("/");
+                navigate("/Selftape");
               }}
               className="bg-neutral-700 hover:bg-neutral-600 text-white py-3 px-6 rounded-full text-sm font-bold"
             >
