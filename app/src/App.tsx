@@ -7,7 +7,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Uploader />}/>
+        <Route path='/selftape' element={<Uploader />}/>
         <Route path='studio' element={<Studio />} />
         <Route path='review' element={<Review />}/>
       </Routes>
