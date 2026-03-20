@@ -1,28 +1,37 @@
 import * as pdfjsLib from 'pdfjs-dist';
 import pdfWorker from 'pdfjs-dist/build/pdf.worker.mjs?url';
+import { useStore } from '../store';
+import { useNavigate } from 'react-router-dom';
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorker;
 
 export default function Uploader() {
 
+  const navigate = useNavigate();
+
+  const setScriptText = useStore((state) => state.setScriptText);
   const fileSelectHandler = async ( event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event?.target.files?.[0];
 
     if(!file){
       console.log("Please upload a .txt or .pdf file")
+
     } else if( file.type === "text/plain"){
       const reader = new FileReader();
       reader.onload = (e) => {
-        console.log(e.target?.result as string)}
+        setScriptText(e.target?.result as string)
+        navigate("/studio");}
+        
       reader.readAsText(file);
       console.log("Sucess! File uploaded.");
       console.log("Name:", file.name);
       console.log("Size:", file.size);
+    
     } else if( file.type === "application/pdf" ){
       
       const arrayBuffer = await file.arrayBuffer();
       const pdf = await pdfjsLib.getDocument({ data:arrayBuffer, isEvalSupported: false }).promise;
-
+     
       let fullText = "";
 
       for(let i = 1; i <= pdf.numPages; i++ ){
@@ -31,11 +40,13 @@ export default function Uploader() {
         const pageText = textContent.items.map((item: any) => item.str).join(" ");
         fullText += pageText + " ";
       }
-      console.log (fullText)
+    
+      setScriptText(fullText)
+      navigate("/studio");
       console.log("Sucess! File uploaded.");
       console.log("Name:", file.name);
       console.log("Size:", file.size);
-    }
+    };
   };
   return (
     <div className="min-h-screen bg-neutral-900 text-white flex flex-col items-center justify-center p-4">
